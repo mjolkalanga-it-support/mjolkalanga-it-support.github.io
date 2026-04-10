@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mjolkalanga-it-support.github.io/sitemap.xml

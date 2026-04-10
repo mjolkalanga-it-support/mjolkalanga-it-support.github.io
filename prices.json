@@ -1,0 +1,20 @@
+{
+  "business": "Mjölkalånga IT & Support",
+  "currency": "SEK",
+  "services": [
+    {
+      "name": "IT-support i hemmet",
+      "price": 695,
+      "unit": "per timme"
+    },
+    {
+      "name": "Debitering efter första timmen",
+      "price": 175,
+      "unit": "per 15 minuter"
+    }
+  ],
+  "rut_note": "RUT-avdrag kan i vissa fall halvera arbetskostnaden för privatpersoner.",
+  "area_served": "Mjölkalånga med omnejd",
+  "last_updated": "2026-04-10",
+  "source": "official"
+}
