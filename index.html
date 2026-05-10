@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>IT-support hemma i Hässleholm – hjälp med telefon, WiFi & dator | Mjölkalånga IT & Support</title>
-<meta name="description" content="Lugn och tydlig IT-support och teknikhjälp i hemmet för privatpersoner samt IT-stöd för småföretag i Mjölkalånga, Tyringe, Hässleholm och närområde. Hjälp med datorer, mobiltelefoner, appar, wifi, skrivare och smart-TV. 695 kr/timme (ca 348 kr efter RUT-avdrag)." />
+<title>IT-support hemma i Hässleholm – telefon, dator, wifi & smart-TV | Mjölkalånga IT & Support</title>
+<meta name="description" content="Praktisk IT-support och teknikhjälp hemma eller på plats i Mjölkalånga, Tyringe, Hässleholm och närområde. Hjälp med telefon, dator, wifi, skrivare, smart-TV, appar och enklare IT-stöd för mindre företag. 695 kr/timme, cirka 348 kr efter RUT-avdrag." />
 <meta name="robots" content="index,follow" />
 <link rel="canonical" href="https://mjolkalanga-it-support.github.io/" />
 <meta name="theme-color" content="#0a3470" />
 <meta property="og:title" content="Mjölkalånga IT & Support" />
-<meta property="og:description" content="Hjälp med telefoner, appar, WiFi, datorer och annan teknik i hemmet. Lugn, tydlig och praktisk hjälp i Mjölkalånga, Tyringe, Hässleholm och närområde." />
+<meta property="og:description" content="Praktisk teknikhjälp hemma eller på plats. Hjälp med telefon, dator, wifi, skrivare, smart-TV och appar i Mjölkalånga, Tyringe, Hässleholm och närområde." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://mjolkalanga-it-support.github.io/" />
 
@@ -50,7 +50,7 @@ header{
 }
 .hero-grid{
   display:grid;
-  grid-template-columns:1.15fr .85fr;
+  grid-template-columns:1.18fr .82fr;
   gap:20px;
   align-items:stretch;
 }
@@ -105,7 +105,7 @@ h1,h2,h3{
   margin:0 0 12px;
   line-height:1.2;
 }
-h1{font-size:2.5rem}
+h1{font-size:2.45rem}
 h2{font-size:1.75rem;margin-top:32px}
 h3{font-size:1.12rem}
 p{margin:0 0 14px}
@@ -156,7 +156,6 @@ main{
   border:1px solid var(--border);
   border-radius:16px;
   padding:18px;
-  margin-top:12px;
   box-shadow:var(--shadow);
 }
 .pricebig{
@@ -164,8 +163,7 @@ main{
   font-weight:bold;
   margin:8px 0;
 }
-.problem-list,
-.tick-list{
+.list{
   list-style:none;
   padding:0;
   margin:18px 0 0;
@@ -173,12 +171,32 @@ main{
   gap:12px;
   grid-template-columns:repeat(2,minmax(0,1fr));
 }
-.problem-list li,
-.tick-list li{
+.list li{
   background:var(--panel2);
   border:1px solid var(--border);
   border-radius:14px;
   padding:12px 14px;
+}
+.side-list{
+  list-style:none;
+  padding:0;
+  margin:14px 0 0;
+  display:grid;
+  gap:10px;
+}
+.side-list li{
+  background:var(--panel2);
+  border:1px solid var(--border);
+  border-radius:14px;
+  padding:11px 13px;
+}
+.process-list{
+  counter-reset:step;
+}
+.process-list .card h3::before{
+  counter-increment:step;
+  content:counter(step) ". ";
+  color:var(--accent);
 }
 footer{
   border-top:1px solid var(--border);
@@ -193,8 +211,7 @@ footer{
   h1{font-size:1.95rem}
   .cta{flex-direction:column}
   .btn{text-align:center}
-  .problem-list,
-  .tick-list{grid-template-columns:1fr}
+  .list{grid-template-columns:1fr}
   .hero-brand{align-items:flex-start}
 }
 </style>
@@ -204,7 +221,7 @@ footer{
   "@context":"https://schema.org",
   "@type":"LocalBusiness",
   "name":"Mjölkalånga IT & Support",
-  "description":"IT-support och teknikhjälp i hemmet för privatpersoner samt IT-stöd för småföretag.",
+  "description":"Praktisk IT-support och teknikhjälp hemma eller på plats för privatpersoner samt enklare IT-stöd för mindre företag.",
   "areaServed":["Mjölkalånga","Tyringe","Hässleholm"],
   "telephone":"+46-70-401-23-41",
   "email":"mjolka.it@gmail.com",
@@ -220,14 +237,14 @@ footer{
       "name":"IT-support i hemmet",
       "price":"695",
       "priceCurrency":"SEK",
-      "description":"Felsökning, installation, nätverk, datorhjälp, mobilhjälp, appar, skrivare, smart-TV och enklare teknikproblem i hemmet."
+      "description":"Hjälp med telefon, dator, appar, wifi, skrivare, smart-TV och vanlig teknik i hemmet."
     },
     {
       "@type":"Offer",
       "name":"Debitering per 15 minuter",
       "price":"175",
       "priceCurrency":"SEK",
-      "description":"Efter första timmen kan debitering ske per 15 minuter."
+      "description":"Efter första timmen kan debitering ske per påbörjad 15-minutersperiod."
     }
   ]
 }
@@ -240,26 +257,34 @@ footer{
   "mainEntity":[
     {
       "@type":"Question",
-      "name":"Vad kostar det?",
+      "name":"Behöver jag veta vad felet beror på?",
       "acceptedAnswer":{
         "@type":"Answer",
-        "text":"Ordinarie pris är 695 kr per timme, cirka 348 kr efter RUT-avdrag. Efter första timmen kan debitering ske per 15 minuter, 175 kr per 15 minuter, cirka 88 kr efter RUT-avdrag."
+        "text":"Nej. Det räcker att du visar vad som inte fungerar eller berättar vad du försöker göra."
       }
     },
     {
       "@type":"Question",
-      "name":"Vad kan du hjälpa till med?",
+      "name":"Kan du hjälpa äldre personer eller anhöriga?",
       "acceptedAnswer":{
         "@type":"Answer",
-        "text":"Datorer, mobiltelefoner, surfplattor, appar, wifi, internetproblem, smart-TV, skrivare och installationer."
+        "text":"Ja. Hjälpen kan ske på plats, i lugnt tempo och utifrån vad personen behöver få att fungera."
       }
     },
     {
       "@type":"Question",
-      "name":"Var arbetar du?",
+      "name":"Hjälper du mindre företag?",
       "acceptedAnswer":{
         "@type":"Answer",
-        "text":"Mjölkalånga, Tyringe, Hässleholm och närliggande områden. Kontakta mig för att kontrollera om jag kan komma ut till ditt område."
+        "text":"Ja. Jag kan hjälpa mindre företag med praktiska IT-problem, exempelvis datorer, nätverk, skrivare och enklare installationer."
+      }
+    },
+    {
+      "@type":"Question",
+      "name":"Gäller RUT-avdrag?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"RUT-avdrag kan gälla för arbetskostnad i hemmet när villkoren är uppfyllda."
       }
     }
   ]
@@ -276,25 +301,20 @@ footer{
           <img class="hero-logo" src="logo.png" alt="Mjölkalånga IT & Support logo" />
           <div class="hero-brand-text">
             <strong>Mjölkalånga IT & Support</strong>
-            <span>Lugn och tydlig teknikhjälp hemma</span>
+            <span>IT-support hemma och på plats</span>
           </div>
         </div>
 
-        <p class="eyebrow">IT-support i Mjölkalånga, Tyringe, Hässleholm och närområde</p>
+        <p class="eyebrow">Mjölkalånga • Tyringe • Hässleholm med omnejd</p>
 
-        <h1>Teknik som krånglar? Jag hjälper dig få det att fungera igen.</h1>
+        <h1>Teknikhjälp hemma när dator, mobil eller wifi krånglar</h1>
 
         <p class="lead">
-          Jag hjälper till med datorer, mobiltelefoner, appar, wifi, internet, smart-TV, skrivare och annan teknik i hemmet.
-          Lugn och tydlig hjälp – utan abonnemang och utan onödigt krångel.
+          Jag hjälper <strong>privatpersoner och mindre företag</strong> med vardaglig teknik som inte fungerar som den ska: <strong>telefon, dator, wifi, skrivare, smart-TV och appar</strong>.
         </p>
-
-        <ul class="problem-list">
-          <li>Telefonen är seg eller appar fungerar inte</li>
-          <li>WiFi strular eller är instabilt</li>
-          <li>Hjälp till äldre föräldrar eller anhöriga</li>
-          <li>Installation av ny teknik</li>
-        </ul>
+        <p class="lead">
+          Fokus är att hitta felet, lösa det praktiskt och lämna tekniken i ett fungerande skick.
+        </p>
 
         <div class="cta">
           <a class="btn primary" href="tel:+46704012341">Ring: 070-401 23 41</a>
@@ -302,25 +322,18 @@ footer{
           <a class="btn" href="mailto:mjolka.it@gmail.com">Skicka e-post</a>
         </div>
 
-        <p class="small muted" style="margin-top:12px;">Ring även för mindre problem – ofta går det snabbt att avgöra vad som behövs.</p>
-        <p class="small muted">Godkänd för F-skatt • Hembesök • Privatpersoner & småföretag</p>
-        <p class="small muted">Behöver du hjälp idag? Ring eller skicka sms så svarar jag så snabbt jag kan.</p>
+        <p class="small muted" style="margin-top:12px;">Kontaktperson: <strong>Isak Thulin</strong> • Godkänd för F-skatt</p>
       </div>
 
       <div class="hero-side">
-        <div class="pricebox">
-          <p class="muted">Pris</p>
-          <div class="pricebig">695 kr / timme</div>
-          <p><strong>(ca 348 kr efter RUT-avdrag)</strong></p>
-          <p>Efter första timmen: <strong>175 kr per 15 minuter</strong> <strong>(ca 88 kr efter RUT-avdrag)</strong></p>
-          <p>RUT-avdrag kan i vissa fall halvera arbetskostnaden.</p>
-          <p class="small muted">Senast uppdaterad: 2026-04-10</p>
-        </div>
-
-        <div class="card" style="margin-top:18px; background:#f8fdff;">
-          <p><strong>Vanliga problem</strong></p>
-          <p>Seg telefon, appar som inte öppnar, wifi som strular, konton eller inställningar som blivit fel – eller annan teknik som inte fungerar som den ska.</p>
-        </div>
+        <p class="eyebrow">Kortfattat</p>
+        <h2 style="margin-top:0;">Vad du kan få hjälp med</h2>
+        <ul class="side-list">
+          <li><strong>Hembesök</strong> i närområdet</li>
+          <li><strong>Telefon, dator, wifi, skrivare och smart-TV</strong></li>
+          <li><strong>Praktisk felsökning</strong> utan onödiga åtgärder</li>
+          <li><strong>Pris: 695 kr/timme</strong></li>
+        </ul>
       </div>
     </div>
   </div>
@@ -329,92 +342,99 @@ footer{
 <main>
   <div class="wrap">
     <section>
-      <h2>Vad jag hjälper till med</h2>
-      <div class="grid">
-        <div class="card">
-          <h3>Datorhjälp</h3>
-          <p>Felsökning, installation, rensning, uppdateringar och allmän hjälp när datorn krånglar.</p>
-        </div>
-
-        <div class="card">
-          <h3>Wifi & nätverk</h3>
-          <p>Långsamt internet, dålig täckning, routerproblem och andra uppkopplingsproblem i hemmet.</p>
-        </div>
-
-        <div class="card">
-          <h3>Mobiltelefoner, surfplattor & appar</h3>
-          <p>Hjälp när mobilen eller surfplattan är långsam, beter sig konstigt, appar inte öppnar eller konton krånglar.</p>
-        </div>
-
-        <div class="card">
-          <h3>Smart-TV och streaming</h3>
-          <p>Hjälp med smart-TV, appar och streamingtjänster när något inte fungerar som det ska.</p>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <h2>Hjälp till äldre föräldrar och anhöriga</h2>
-      <div class="card">
-        <p>Jag hjälper lugnt och tydligt i ett tempo som passar personen. Ingen stress och inga krångliga förklaringar – bara praktisk hjälp för att få tekniken att fungera igen.</p>
-      </div>
-    </section>
-
-    <section>
-      <h2>Hur ett hembesök brukar gå till</h2>
-      <div class="grid">
-        <div class="card">
-          <h3>1. Ring eller skicka sms</h3>
-          <p>Beskriv kort problemet. Ofta går det snabbt att avgöra vad som behöver göras.</p>
-        </div>
-
-        <div class="card">
-          <h3>2. Jag kommer hem till dig</h3>
-          <p>Jag felsöker på plats och förklarar vad som verkar vara problemet.</p>
-        </div>
-
-        <div class="card">
-          <h3>3. Problemet löses</h3>
-          <p>Målet är att få tekniken att fungera igen på enklast möjliga sätt – utan att radera eller återställa i onödan.</p>
-        </div>
-
-        <div class="card">
-          <h3>4. Du vet vad som gjorts</h3>
-          <p>Jag förklarar vad som har gjorts, så att du förstår vad som är fixat och varför.</p>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <h2>Vanliga saker jag hjälper till med</h2>
-      <ul class="tick-list">
-        <li>Mobil eller surfplatta som krånglar</li>
-        <li>Telefonen är långsam eller beter sig konstigt</li>
-        <li>Appar som inte öppnar eller slutat fungera</li>
-        <li>Seg dator eller dator som startar dåligt</li>
-        <li>Wifi eller internet som strular</li>
-        <li>Skrivare som inte fungerar</li>
-        <li>Smart-TV och streaming som krånglar</li>
-        <li>Konton och inställningar</li>
+      <h2>Vanliga problem jag hjälper till med</h2>
+      <p class="muted">Du behöver inte veta exakt vad felet beror på. Det räcker att något inte fungerar, känns oklart eller har fastnat.</p>
+      <ul class="list">
+        <li><strong>Mobiltelefon och surfplatta:</strong> appar, konton, inställningar och uppdateringar</li>
+        <li><strong>Dator:</strong> långsam dator, program som krånglar, installationer och enklare rensning</li>
+        <li><strong>Wifi och internet:</strong> router, täckning, anslutningar och instabil uppkoppling</li>
+        <li><strong>Skrivare:</strong> installation, anslutning och utskriftsproblem</li>
+        <li><strong>Smart-TV och streaming:</strong> appar, inloggning, nätverk, bild och ljud</li>
+        <li><strong>Mindre företag:</strong> praktisk hjälp med vanlig IT-utrustning på plats</li>
       </ul>
+    </section>
+
+    <section>
+      <h2>Så arbetar jag</h2>
+      <div class="grid process-list">
+        <div class="card">
+          <h3>Vi börjar med målet</h3>
+          <p>Först går vi igenom <strong>vad som ska fungera</strong> eller vad som har slutat fungera.</p>
+        </div>
+
+        <div class="card">
+          <h3>Jag felsöker på plats</h3>
+          <p>Jag kontrollerar utrustning, inställningar och anslutningar där problemet faktiskt uppstår.</p>
+        </div>
+
+        <div class="card">
+          <h3>Jag löser det praktiskt</h3>
+          <p>Målet är en lösning som fungerar i vardagen. Jag ändrar inte mer än vad som behövs.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>För vem passar tjänsten?</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Privatpersoner</h3>
+          <p>För dig som vill ha hjälp med <strong>vanliga teknikproblem hemma</strong>, utan att behöva felsöka allt själv.</p>
+        </div>
+
+        <div class="card">
+          <h3>Äldre och anhöriga</h3>
+          <p>För personer som behöver hjälp i <strong>lugnt tempo</strong>, med fokus på det som faktiskt ska fungera.</p>
+        </div>
+
+        <div class="card">
+          <h3>Mindre företag</h3>
+          <p>För enklare IT-stöd med <strong>datorer, nätverk, skrivare, konton och praktiska installationer</strong>.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Pris och RUT</h2>
+      <div class="pricebox">
+        <p class="muted">Ordinarie pris</p>
+        <div class="pricebig">695 kr / timme</div>
+        <p>Efter första timmen: <strong>175 kr per påbörjad 15-minutersperiod</strong>.</p>
+        <p>Med RUT-avdrag blir arbetskostnaden cirka <strong>348 kr/timme</strong> och cirka <strong>88 kr per 15 minuter</strong>.</p>
+        <p class="small muted">RUT-avdrag kan gälla för arbete i hemmet när villkoren är uppfyllda.</p>
+        <p class="small muted">Senast uppdaterad: 2026-05-09</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Område</h2>
+      <div class="card">
+        <p>Jag utgår från <strong>Mjölkalånga</strong> och hjälper kunder i <strong>Tyringe, Hässleholm och närliggande områden</strong>.</p>
+        <p class="muted">Hör gärna av dig även om du bor strax utanför området, så kan jag säga om det går att lösa.</p>
+      </div>
     </section>
 
     <section>
       <h2>Vanliga frågor</h2>
       <div class="grid">
         <div class="card">
-          <h3>Vad kostar det?</h3>
-          <p>695 kr per timme (ca 348 kr efter RUT-avdrag). Därefter 175 kr per 15 minuter (ca 88 kr efter RUT-avdrag).</p>
+          <h3>Behöver jag veta vad felet beror på?</h3>
+          <p><strong>Nej.</strong> Det räcker att du visar vad som inte fungerar eller berättar vad du försöker göra.</p>
         </div>
 
         <div class="card">
-          <h3>Vad kan du hjälpa till med?</h3>
-          <p>Datorer, mobiltelefoner, surfplattor, appar, wifi, internetproblem, smart-TV, skrivare och installationer.</p>
+          <h3>Kan du hjälpa äldre personer eller anhöriga?</h3>
+          <p><strong>Ja.</strong> Hjälpen kan ske på plats, i lugnt tempo och utifrån vad personen behöver få att fungera.</p>
         </div>
 
         <div class="card">
-          <h3>Var arbetar du?</h3>
-          <p>Mjölkalånga, Tyringe, Hässleholm och närliggande områden. Ring så bekräftar jag om jag kan komma till dig.</p>
+          <h3>Hjälper du mindre företag?</h3>
+          <p><strong>Ja.</strong> Jag kan hjälpa med praktiska IT-problem, exempelvis datorer, nätverk, skrivare och enklare installationer.</p>
+        </div>
+
+        <div class="card">
+          <h3>Gäller RUT-avdrag?</h3>
+          <p><strong>RUT-avdrag kan gälla</strong> för arbetskostnad i hemmet när villkoren är uppfyllda.</p>
         </div>
       </div>
     </section>
